@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 
-@RequestMapping("/first-service")
+//RequestMapping("/first-service") 이제 필요없음
 @RequiredArgsConstructor
 @RestController
 public class MainController {
