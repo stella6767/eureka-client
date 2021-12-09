@@ -17,3 +17,10 @@ eureka:
 spring:
   application:
     name: first-service
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, info  #refresh ? ??? cloud config env ? ??
