@@ -17,10 +17,15 @@ eureka:
 spring:
   application:
     name: first-service
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: username
+    password: password
 
 
 management:
   endpoints:
     web:
       exposure:
-        include: refresh, health, beans, info  #refresh ? ??? cloud config env ? ??
+        include: refresh, health, beans, info, busrefresh  #refresh ? ??? cloud config env ? ??
