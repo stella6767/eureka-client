@@ -37,5 +37,14 @@ public class MainController {
         return String.format("this is a message from first service on Port %s", env.getProperty("local.server.port"));
     }
 
+    @GetMapping("/envCheck")
+    public String envCheck(HttpServletRequest request){
 
+        logger.info("Server port={}", request.getServerPort());
+
+        return String.format("this is a message from first service cloud env, author: " + env.getProperty("author")
+        + " version: " + env.getProperty("version")
+
+        );
+    }
 }
